@@ -41,7 +41,7 @@ function printSection(stream, title, section, printCommitLinks) {
     return;
   }
 
-  stream.write(format('\n## %s\n\n', title));
+  stream.write(format('\n## %s\n', title));
 
   components.forEach(printComponent.bind(this, stream, section, printCommitLinks), this);
 

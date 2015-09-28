@@ -15,11 +15,11 @@ function sendToStream(stream, sections, deferred) {
   this.printSection(stream, 'Test', sections.test, false);
   this.printSection(stream, 'Chore', sections.chore, false);
   this.printSection(stream, 'Documentation', sections.docs, false);
-  if (sections.breaks[this.emptyComponent].length > 0 ) {
+  if (sections.breaks[this.emptyComponent].length > 0) {
     this.printSection(stream, 'Breaking Changes', sections.breaks, false);
   }
 
-  this.printSalute(stream);
+  //this.printSalute(stream);
   stream.end();
   stream.on('finish', deferred.resolve);
 }
